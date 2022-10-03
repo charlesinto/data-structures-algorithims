@@ -16,6 +16,27 @@ public class LinkedList<T> {
 
     }
 
+    public T getKthNodeFromEnd(int k) throws IllegalAccessException {
+        Node<T> node = first;
+        Node<T> step = first;
+
+        if(first == null)
+            throw new IllegalAccessException("Empty list");
+
+        for(int i = 0;  i < k ; i++){
+            step = step.getNext();
+
+            if(step == null) throw new IllegalAccessException("K is more than the length of the list");
+        }
+
+
+        while (step != null){
+            node = node.getNext();
+            step = step.getNext();
+        }
+        return node.getValue();
+    }
+
     public void deleteFirst(T value){
 
 
