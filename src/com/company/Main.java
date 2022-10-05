@@ -1,7 +1,6 @@
 package com.company;
 
-import com.company.DASolutions.CircularArray;
-import com.company.DASolutions.FirstNonRepeatedString;
+import com.company.DASolutions.StringManipulation;
 import com.company.DASolutions.StringReverse;
 import com.company.DataStructures.Queue.StackQueue;
 
@@ -21,7 +20,9 @@ public class Main {
 
         System.out.println("items> "+ stackQueue);
 
-        System.out.println("First Non Repeated> " + FirstNonRepeatedString.getFirstNonRepeated("a ggreen apple"));
+        System.out.println("First Non Repeated> " + StringManipulation.getFirstNonRepeated("a ggreen apple"));
+
+        System.out.println("First Repeated> " + StringManipulation.getFirstRepeatedCharacter("a ggren apple"));
 //        LinkedList<Integer> list = new LinkedList<>();
 //
 //        list.addFirst(10);

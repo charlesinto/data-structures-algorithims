@@ -1,9 +1,11 @@
 package com.company.DASolutions;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
-public class FirstNonRepeatedString {
+public class StringManipulation {
 
     public static Character getFirstNonRepeated(String input){
         Map<Character, Integer> chars = new HashMap<>();
@@ -20,6 +22,20 @@ public class FirstNonRepeatedString {
             if(chars.get(ch) == 1) return ch;
         }
 
+        return null;
+    }
+
+    public static Character getFirstRepeatedCharacter(String input){
+        Set<Character> chars = new HashSet<>();
+
+        for (Character ch : input.toLowerCase().toCharArray()){
+            if(ch == ' ') continue;
+
+            else if(chars.contains(ch))
+                return ch;
+
+            chars.add(ch);
+        }
         return null;
     }
 }
