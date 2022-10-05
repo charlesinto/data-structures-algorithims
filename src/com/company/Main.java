@@ -1,35 +1,49 @@
 package com.company;
 
-import com.company.DataStructures.LinkedList.DoubleLinkedList.DoubleLinkedList;
-import com.company.DataStructures.LinkedList.SingleLinkedList.LinkedList;
+import com.company.DASolutions.CircularArray;
+import com.company.DASolutions.StringReverse;
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        LinkedList<Integer> list = new LinkedList<>();
+        StringReverse stringReverse = new StringReverse();
 
-        list.addFirst(10);
-        list.addFirst(20);
-        list.addFirst(30);
-        list.addFirst(40);
-        list.addFirst(50);
-        list.addFirst(60);
-        list.addLast(5);
-        list.addLast(0);
-        list.addLast(2);
-        list.deleteFirst(60);
+        CircularArray<Integer> items = new CircularArray<>(5);
 
-        try {
-            // pos = k - 1
-            System.out.println( list.getKthNodeFromEnd(4));
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
+        items.add(0);
+        items.add(1);
+        items.add(2);
+        items.add(3);
+        items.add(4);
+        items.add(5);
 
-        System.out.println("contains 50: " + list.contains(500));
+        items.add(6);
 
-        System.out.println(list);
+        System.out.println("items> "+ items);
+//        LinkedList<Integer> list = new LinkedList<>();
+//
+//        list.addFirst(10);
+//        list.addFirst(20);
+//        list.addFirst(30);
+//        list.addFirst(40);
+//        list.addFirst(50);
+//        list.addFirst(60);
+//        list.addLast(5);
+//        list.addLast(0);
+//        list.addLast(2);
+//        list.deleteFirst(60);
+//
+//        try {
+//            // pos = k - 1
+//            System.out.println( list.getKthNodeFromEnd(3));
+//        } catch (IllegalAccessException e) {
+//            e.printStackTrace();
+//        }
+//
+//        System.out.println("contains 50: " + list.contains(500));
+//
+//        System.out.println(list);
 
 //        DoubleLinkedList<Integer> list2 = new DoubleLinkedList<>();
 //
