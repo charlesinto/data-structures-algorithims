@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.DASolutions.CircularArray;
 import com.company.DASolutions.StringReverse;
+import com.company.DataStructures.Queue.StackQueue;
 
 public class Main {
 
@@ -9,18 +10,15 @@ public class Main {
 	// write your code here
         StringReverse stringReverse = new StringReverse();
 
-        CircularArray<Integer> items = new CircularArray<>(5);
+        StackQueue<Integer> stackQueue = new StackQueue<>();
 
-        items.add(0);
-        items.add(1);
-        items.add(2);
-        items.add(3);
-        items.add(4);
-        items.add(5);
+        stackQueue.enqueue(30);
+        stackQueue.enqueue(40);
+        stackQueue.enqueue(50);
 
-        items.add(6);
+        System.out.println("remove front> "+ stackQueue.dequeue());
 
-        System.out.println("items> "+ items);
+        System.out.println("items> "+ stackQueue);
 //        LinkedList<Integer> list = new LinkedList<>();
 //
 //        list.addFirst(10);
